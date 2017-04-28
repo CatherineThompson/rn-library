@@ -1,3 +1,5 @@
+/* @flow */
+
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Notifications } from 'expo';
@@ -14,6 +16,8 @@ import registerForPushNotificationsAsync
   from '../api/registerForPushNotificationsAsync';
 
 export default class RootNavigation extends React.Component {
+  _notificationSubscription: any;
+
   componentDidMount() {
     this._notificationSubscription = this._registerForPushNotifications();
   }
@@ -46,7 +50,7 @@ export default class RootNavigation extends React.Component {
     );
   }
 
-  _renderIcon(name, isSelected) {
+  _renderIcon(name: string, isSelected: boolean) {
     return (
       <FontAwesome
         name={name}
@@ -69,7 +73,7 @@ export default class RootNavigation extends React.Component {
     );
   }
 
-  _handleNotification = ({ origin, data }) => {
+  _handleNotification = ({ origin, data }: Object) => {
     this.props.navigator.showLocalAlert(
       `Push notification ${origin} with data: ${JSON.stringify(data)}`,
       Alerts.notice

@@ -1,0 +1,11 @@
+[ignore]
+.*/node_modules/*.
+./libdefs.js
+.*/__tests/*.
+
+[include]
+
+[libs]
+./libdefs.js
+
+[options]
