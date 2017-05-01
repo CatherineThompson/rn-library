@@ -1,7 +1,11 @@
-const tintColor = '#2f95dc';
+const tintColor = '#2f95dc'
+const dividerGray = '#E5E5E5'
+const textGray = '#9B9B9B'
 
 export default {
   tintColor,
+  dividerGray,
+  textGray,
   tabIconDefault: '#888',
   tabIconSelected: tintColor,
   tabBar: '#fefefe',
@@ -11,4 +15,4 @@ export default {
   warningText: '#666804',
   noticeBackground: tintColor,
   noticeText: '#fff',
-};
+}
