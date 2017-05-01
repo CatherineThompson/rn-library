@@ -7,7 +7,7 @@ import LoadingButton from '../libraryComponents/LoadingButton'
 import Alerts from '../constants/Alerts'
 import StyledText from '../components/StyledText'
 
-export default class MyComponent extends Component {
+export default class LoadingButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
