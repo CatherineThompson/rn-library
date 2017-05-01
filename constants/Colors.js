@@ -1,8 +1,10 @@
+const primaryColor = '#156e9a'
 const tintColor = '#2f95dc'
 const dividerGray = '#E5E5E5'
 const textGray = '#9B9B9B'
 
 export default {
+  primaryColor,
   tintColor,
   dividerGray,
   textGray,

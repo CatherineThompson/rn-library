@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
+import Colors from '../constants/Colors'
 
 export default class StyledText extends React.Component {
   props: {
@@ -10,7 +11,7 @@ export default class StyledText extends React.Component {
     return (
       <Text
         {...this.props}
-        style={this.props.style}
+        style={[{color: Colors.primaryColor}, this.props.style]}
       />
     )
   }
