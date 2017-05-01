@@ -6,6 +6,7 @@ import { FontAwesome } from '@expo/vector-icons'
 
 import Router from './navigation/Router'
 import cacheAssetsAsync from './utilities/cacheAssetsAsync'
+import Colors from './constants/Colors'
 
 class AppContainer extends React.Component {
   state = {
@@ -44,6 +45,13 @@ class AppContainer extends React.Component {
             <StackNavigation
               id="root"
               initialRoute={Router.getRoute('home')}
+              defaultRouteConfig={{
+                navigationBar: {
+                  tintColor: Colors.primaryColor,
+                  backgroundColor: 'transparent',
+                  borderBottomWidth: 0
+                }
+              }}
             />
           </NavigationProvider>
 

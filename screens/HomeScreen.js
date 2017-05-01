@@ -14,7 +14,7 @@ import Layout from '../constants/Layout'
 export default class HomeScreen extends React.Component {
   static route = {
     navigationBar: {
-      visible: false,
+      visible: false
     }
   }
 
@@ -36,6 +36,10 @@ export default class HomeScreen extends React.Component {
             title='Peaking Drawer'
             description='Overlaying screen that can be opened with swipe gestures'
             onPress={() => this.props.navigator.push(Router.getRoute('peakingDrawer'))} />
+          <ListComponent
+            title='Slider Button'
+            description='Styled slider'
+            onPress={() => this.props.navigator.push(Router.getRoute('sliderButton'))} />
         </ScrollView>
       </View>
     )
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: Layout.statusBar.height
+    marginTop: Layout.statusBar.height
   },
   titleText: {
     alignSelf: 'center',

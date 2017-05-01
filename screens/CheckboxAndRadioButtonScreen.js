@@ -3,6 +3,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native'
+
 import Checkbox from '../libraryComponents/Checkbox'
 import RadioButton from '../libraryComponents/RadioButton'
 import StyledText from '../components/StyledText'
@@ -19,8 +20,8 @@ export default class CheckboxAndRadioButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>Click on both buttons. Only the active button will trigger an alert. The inactive button is disabled when the status is 'loading'.</StyledText>
-        <View style={styles.itemsContainer}>
+        <StyledText style={styles.infoText}>Click on the items to select. The icons used are Platform specific.</StyledText>
+        <View>
           <Checkbox
             title='checkbox title'
             selected={this.state.checkboxSelected}
@@ -51,8 +52,5 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 16
-  },
-  itemsContainer: {
-
   }
 })

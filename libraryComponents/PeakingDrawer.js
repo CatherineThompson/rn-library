@@ -11,7 +11,7 @@ import StyledText from '../components/StyledText'
 
 export default class PeakingDrawer extends Component {
   state = {
-    anim: new Animated.Value(Layout.window.height - 90)
+    anim: new Animated.Value(Layout.window.height - Layout.navBar.height - 90)
   }
 
   render () {
@@ -40,10 +40,10 @@ export default class PeakingDrawer extends Component {
     this.setState({gestureName: gestureName})
     switch (gestureName) {
       case SWIPE_UP:
-        Animated.timing(this.state.anim, {toValue: 100, duration: 250}).start()
+        Animated.timing(this.state.anim, {toValue: 100 - Layout.navBar.height, duration: 250}).start()
         break
       case SWIPE_DOWN:
-        Animated.timing(this.state.anim, {toValue: Layout.window.height - 90, duration: 250}).start()
+        Animated.timing(this.state.anim, {toValue: Layout.window.height - Layout.navBar.height - 90, duration: 250}).start()
         break
     }
   }

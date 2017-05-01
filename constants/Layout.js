@@ -3,6 +3,8 @@ import {
   Platform,
   StatusBar
 } from 'react-native'
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : (global.__exponent ? 25 : 0)
+const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 55
 
 export default {
   window: {
@@ -11,5 +13,8 @@ export default {
   },
   statusBar: {
     height: Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
+  },
+  navBar: {
+    height: STATUSBAR_HEIGHT + APPBAR_HEIGHT
   }
 }
