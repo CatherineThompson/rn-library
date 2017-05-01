@@ -6,8 +6,7 @@
   "main": "main.js",
   "scripts": {
     "test": "node node_modules/jest/bin/jest.js",
-    "flow": "flow; test $? -eq 1 -o $? -eq 2",
-    "flow:precommit": "flow; test $? -eq 1 -o $? -eq 2 && exit 1 || exit 0"
+    "flow": "flow; test $? -eq 1 -o $? -eq 2"
   },
   "jest": {
     "preset": "jest-expo"
@@ -34,11 +33,6 @@
     "eslint-plugin-react-native": "^2.3.2",
     "eslint-plugin-standard": "^3.0.1",
     "flow-bin": "^0.44.2",
-    "jest-expo": "0.4.0",
-    "pre-commit": "^1.2.2"
-  },
-  "precommit.silent": true,
-  "pre-commit": [
-    "flow:precommit"
-  ]
+    "jest-expo": "0.4.0"
+  }
 }

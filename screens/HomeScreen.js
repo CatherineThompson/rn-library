@@ -1,5 +1,3 @@
-/* @flow */
-
 import React from 'react'
 import {
   ScrollView,
@@ -7,15 +5,13 @@ import {
   View,
 } from 'react-native'
 
+import Router from '../navigation/Router'
+
 import StyledText from '../components/StyledText'
 import ListComponent from '../components/ListComponent'
 import Layout from '../constants/Layout'
 
 export default class HomeScreen extends React.Component {
-  props: {
-    name: ?string
-  }
-
   static route = {
     navigationBar: {
       visible: false,
@@ -27,9 +23,11 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <StyledText style={styles.titleText}>Components Library</StyledText>
         <ScrollView
-          style={styles.container}
           contentContainerStyle={styles.contentContainer}>
-          <ListComponent title='testing' description='this is a component'/>
+          <ListComponent
+            title='Loading Button'
+            description='This button shows a loading icon and becomes inactive when loading'
+            onPress={() => this.props.navigator.push(Router.getRoute('loadingButton'))}/>
           <ListComponent title='testing1' />
           <ListComponent title='testing2' />
         </ScrollView>
@@ -47,8 +45,6 @@ const styles = StyleSheet.create({
   titleText: {
     alignSelf: 'center',
     fontSize: 30,
-    padding: 10
-  },
-  contentContainer: {
+    padding: 16
   }
 })
