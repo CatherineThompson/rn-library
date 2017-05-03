@@ -7,6 +7,7 @@ import {
 import Checkbox from '../libraryComponents/Checkbox'
 import RadioButton from '../libraryComponents/RadioButton'
 import StyledText from '../components/StyledText'
+import Strings from '../assets/resources/Strings'
 
 export default class CheckboxAndRadioButtonScreen extends Component {
   constructor (props) {
@@ -20,7 +21,7 @@ export default class CheckboxAndRadioButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>Click on the items to select. The icons used are Platform specific.</StyledText>
+        <StyledText style={styles.infoText}>{Strings.screen_descriptions.CheckboxAndRadioButton}</StyledText>
         <View>
           <Checkbox
             title='Checkbox title'

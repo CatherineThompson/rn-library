@@ -1,0 +1,34 @@
+{
+  "screen_descriptions": {
+    "StyledTextInput": "Type in the text input fields. The fields avoid the keyboard. Users can navigate between fields by pressing the return button on the keyboard.",
+    "LoadingButton": "Click on both buttons. Only the active button will trigger an alert. The inactive button is disabled when the status is 'loading'.",
+    "CheckboxAndRadioButton": "Click on the items to select. The icons used are Platform specific."
+  },
+  "components": [
+    {
+      "title": "Checkbox and Radio Button",
+      "description": "Platform specific checkboxes and radio buttons",
+      "navigation": "checkboxAndRadioButton"
+    },
+    {
+      "title": "Loading Button",
+      "description": "This button shows a loading icon and becomes inactive when loading",
+      "navigation": "loadingButton"
+    },
+    {
+      "title": "Peaking Drawer",
+      "description": "Overlaying screen that can be opened and closed with swipe gestures",
+      "navigation": "peakingDrawer"
+    },
+    {
+      "title": "Slider Button",
+      "description": "Styled slider",
+      "navigation": "sliderButton"
+    },
+    {
+      "title": "Styled Text Input",
+      "description": "Simple styled TextInput",
+      "navigation": "styledTextInput"
+    }
+  ]
+}

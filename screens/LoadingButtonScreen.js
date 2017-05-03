@@ -6,12 +6,13 @@ import {
 import LoadingButton from '../libraryComponents/LoadingButton'
 import Alerts from '../constants/Alerts'
 import StyledText from '../components/StyledText'
+import Strings from '../assets/resources/Strings'
 
 export default class LoadingButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>Click on both buttons. Only the active button will trigger an alert. The inactive button is disabled when the status is 'loading'.</StyledText>
+        <StyledText style={styles.infoText}>{Strings.screen_descriptions.LoadingButton}</StyledText>
         <View>
           <LoadingButton
             title='Active Button'

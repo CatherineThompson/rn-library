@@ -26,7 +26,8 @@ export default class StyledTextInput extends Component {
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: 1,
-    borderBottomColor: Colors.primaryColor
+    borderBottomColor: Colors.primaryColor,
+    width: 300
   },
   textInput: {
     backgroundColor: 'transparent',
