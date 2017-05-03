@@ -6,6 +6,7 @@ import CheckboxAndRadioButtonScreen from '../screens/CheckboxAndRadioButtonScree
 import PeakingDrawerScreen from '../screens/PeakingDrawerScreen'
 import SliderButtonScreen from '../screens/SliderButtonScreen'
 import StyledTextInputScreen from '../screens/StyledTextInputScreen'
+import BubbleButtonsScreen from '../screens/BubbleButtonsScreen'
 
 export default createRouter(() => ({
   home: () => HomeScreen,
@@ -13,5 +14,6 @@ export default createRouter(() => ({
   checkboxAndRadioButton: () => CheckboxAndRadioButtonScreen,
   peakingDrawer: () => PeakingDrawerScreen,
   sliderButton: () => SliderButtonScreen,
-  styledTextInput: () => StyledTextInputScreen
+  styledTextInput: () => StyledTextInputScreen,
+  bubbleButtons: () => BubbleButtonsScreen
 }))

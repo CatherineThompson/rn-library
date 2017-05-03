@@ -1,10 +1,16 @@
 {
   "screen_descriptions": {
-    "StyledTextInput": "Type in the text input fields. The fields avoid the keyboard. Users can navigate between fields by pressing the return button on the keyboard.",
+    "BubbleButtons": "Select the buttons to get a response. These buttons can be used to manage contacts.",
+    "CheckboxAndRadioButton": "Click on the items to select. The icons used are Platform specific.",
     "LoadingButton": "Click on both buttons. Only the active button will trigger an alert. The inactive button is disabled when the status is 'loading'.",
-    "CheckboxAndRadioButton": "Click on the items to select. The icons used are Platform specific."
+    "StyledTextInput": "Type in the text input fields. The fields avoid the keyboard. Users can navigate between fields by pressing the return button on the keyboard."
   },
   "components": [
+    {
+      "title": "Bubble Buttons",
+      "description": "Circular buttons that can be used to manage a user's contacts",
+      "navigation": "bubbleButtons"
+    },
     {
       "title": "Checkbox and Radio Button",
       "description": "Platform specific checkboxes and radio buttons",

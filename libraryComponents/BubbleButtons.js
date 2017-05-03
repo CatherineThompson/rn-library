@@ -7,20 +7,20 @@ import {
 import Colors from '../constants/Colors'
 import { FontAwesome } from '@expo/vector-icons'
 
-export const ContactBubble = ({user, onPress}) => (
+export const ContactBubble = ({image, onPress}) => (
   <TouchableOpacity
     style={styles.profileImageContainer}
     onPress={onPress}>
     <Image
       style={styles.profileImage}
-      source={user.profile_image} />
+      source={image} />
   </TouchableOpacity>
 )
 
 export const GroupBubble = ({onPress}) => (
   <TouchableOpacity
     style={styles.groupIconContainer}
-    onPress={this._handleContactPress}>
+    onPress={onPress}>
     <FontAwesome
       name='group'
       size={38}
@@ -31,7 +31,7 @@ export const GroupBubble = ({onPress}) => (
 export const AddContact = ({onPress}) => (
   <TouchableOpacity
     style={styles.plusIconContainer}
-    onPress={this._handleContactPress}>
+    onPress={onPress}>
     <FontAwesome
       name='plus'
       size={34}
