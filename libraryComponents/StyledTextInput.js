@@ -11,6 +11,7 @@ export default class StyledTextInput extends Component {
     return (
       <View style={styles.container}>
         <TextInput
+          ref="TextInput"
           allowFontScaling={false}
           placeholderTextColor={Colors.textGray}
           underlineColorAndroid="transparent"

@@ -12,9 +12,13 @@ export default class StyledTextInputScreen extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      phoneNumberText: '',
+      nameText: '',
       emailText: ''
     }
+  }
+
+  _handleFocusNextField = (nextField) => {
+    this.refs[nextField].refs.TextInput.focus()
   }
 
   render () {
@@ -23,11 +27,18 @@ export default class StyledTextInputScreen extends Component {
         <StyledText style={styles.infoText}>{Strings.screen_descriptions.StyledTextInput}</StyledText>
         <KeyboardAvoidingView behavior='padding' style={styles.itemsContainer}>
           <StyledTextInput
-            placeholder="Phone Number"
-            keyboardType='numeric' />
+            ref="1"
+            placeholder="Name"
+            blurOnSubmit={false}
+            onSubmitEditing={this._handleFocusNextField.bind(this, '2')}
+          />
           <StyledTextInput
+            ref="2"
             placeholder="Email"
-            keyboardType='email-address' />
+            keyboardType='email-address'
+            blurOnSubmit={false}
+            onSubmitEditing={this._handleFocusNextField.bind(this, '1')}
+          />
         </KeyboardAvoidingView>
       </View>
     )
