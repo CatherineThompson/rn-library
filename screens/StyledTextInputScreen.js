@@ -5,7 +5,7 @@ import {
   KeyboardAvoidingView
 } from 'react-native'
 import StyledTextInput from '../libraryComponents/StyledTextInput'
-import StyledText from '../components/StyledText'
+import { InfoText } from '../components/StyledText'
 import Strings from '../assets/resources/Strings'
 
 export default class StyledTextInputScreen extends Component {
@@ -24,7 +24,7 @@ export default class StyledTextInputScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>{Strings.screen_descriptions.StyledTextInput}</StyledText>
+        <InfoText>{Strings.screen_descriptions.StyledTextInput}</InfoText>
         <KeyboardAvoidingView behavior='padding' style={styles.itemsContainer}>
           <StyledTextInput
             ref="1"
@@ -54,8 +54,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-  infoText: {
-    fontSize: 16
   }
 })

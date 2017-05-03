@@ -5,14 +5,14 @@ import {
 } from 'react-native'
 import LoadingButton from '../libraryComponents/LoadingButton'
 import Alerts from '../constants/Alerts'
-import StyledText from '../components/StyledText'
+import { InfoText } from '../components/StyledText'
 import Strings from '../assets/resources/Strings'
 
 export default class LoadingButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>{Strings.screen_descriptions.LoadingButton}</StyledText>
+        <InfoText>{Strings.screen_descriptions.LoadingButton}</InfoText>
         <View>
           <LoadingButton
             title='Active Button'
@@ -37,10 +37,7 @@ export default class LoadingButtonScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-around'
-  },
-  infoText: {
-    padding: 32,
-    fontSize: 16
+    justifyContent: 'space-around',
+    padding: 32
   }
 })

@@ -16,3 +16,18 @@ export default class StyledText extends React.Component {
     )
   }
 }
+
+export class InfoText extends React.Component {
+  props: {
+    style: ?Object
+  }
+
+  render () {
+    return (
+      <Text
+        {...this.props}
+        style={[{color: Colors.primaryColor, fontSize: 16}, this.props.style]}
+      />
+    )
+  }
+}

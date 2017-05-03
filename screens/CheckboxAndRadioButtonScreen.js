@@ -6,7 +6,7 @@ import {
 
 import Checkbox from '../libraryComponents/Checkbox'
 import RadioButton from '../libraryComponents/RadioButton'
-import StyledText from '../components/StyledText'
+import { InfoText } from '../components/StyledText'
 import Strings from '../assets/resources/Strings'
 
 export default class CheckboxAndRadioButtonScreen extends Component {
@@ -21,7 +21,7 @@ export default class CheckboxAndRadioButtonScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <StyledText style={styles.infoText}>{Strings.screen_descriptions.CheckboxAndRadioButton}</StyledText>
+        <InfoText>{Strings.screen_descriptions.CheckboxAndRadioButton}</InfoText>
         <View>
           <Checkbox
             title='Checkbox title'
@@ -52,8 +52,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     paddingVertical: 64,
     alignItems: 'center'
-  },
-  infoText: {
-    fontSize: 16
   }
 })

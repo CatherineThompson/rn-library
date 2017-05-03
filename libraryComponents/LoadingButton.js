@@ -10,7 +10,11 @@ import StyledText from '../components/StyledText'
 
 const LoadingButton = ({title, style, onPress, status}: Object) => (
     <TouchableOpacity
-      style={[styles.button, style]}
+      style={[
+        styles.button,
+        style,
+        { opacity: status && status === 'loading' ? 0.7 : 1 }
+      ]}
       onPress={status && status === 'loading' ? null : onPress}>
       <StyledText style={styles.text}>{title}</StyledText>
       {
@@ -31,8 +35,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: 225,
     borderWidth: 1,
-    borderColor: Colors.primaryColor,
     backgroundColor: 'transparent',
+    borderColor: Colors.primaryColor,
     borderRadius: 8,
     alignItems: 'center',
     margin: 16
