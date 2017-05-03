@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
   View,
   StyleSheet,
-  Animated
+  Animated,
+  Easing
 } from 'react-native'
 import Colors from '../constants/Colors'
 import Layout from '../constants/Layout'
@@ -19,7 +20,7 @@ export default class PeakingDrawer extends Component {
       <Animated.View style={[styles.container, {top: this.state.anim}]}>
         <GestureRecognizer
           onSwipe={(direction, state) => this.onSwipe(direction, state)}
-          config={{velocityThreshold: 0.3, directionalOffsetThreshold: 80}}
+          config={{velocityThreshold: 0.9, directionalOffsetThreshold: 80}}
           style={styles.innerContainer} >
 
           <View style={styles.peakingContainer}>
@@ -40,10 +41,18 @@ export default class PeakingDrawer extends Component {
     this.setState({gestureName: gestureName})
     switch (gestureName) {
       case SWIPE_UP:
-        Animated.timing(this.state.anim, {toValue: 100 - Layout.navBar.height, duration: 250}).start()
+        Animated.timing(this.state.anim, {
+          toValue: 100 - Layout.navBar.height,
+          easing: Easing.bezier(0.72, 0.27, 0.34, 0.86),
+          duration: 500
+        }).start()
         break
       case SWIPE_DOWN:
-        Animated.timing(this.state.anim, {toValue: Layout.window.height - Layout.navBar.height - 90, duration: 250}).start()
+        Animated.timing(this.state.anim, {
+          toValue: Layout.window.height - Layout.navBar.height - 90,
+          easing: Easing.bezier(0.72, 0.27, 0.34, 0.86),
+          duration: 500
+        }).start()
         break
     }
   }

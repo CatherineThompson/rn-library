@@ -34,12 +34,16 @@ export default class HomeScreen extends React.Component {
             onPress={() => this.props.navigator.push(Router.getRoute('checkboxAndRadioButton'))} />
           <ListComponent
             title='Peaking Drawer'
-            description='Overlaying screen that can be opened with swipe gestures'
+            description='Overlaying screen that can be opened and closed with swipe gestures'
             onPress={() => this.props.navigator.push(Router.getRoute('peakingDrawer'))} />
           <ListComponent
             title='Slider Button'
             description='Styled slider'
             onPress={() => this.props.navigator.push(Router.getRoute('sliderButton'))} />
+          <ListComponent
+            title='Styled Text Input'
+            description='Simple styled TextInput'
+            onPress={() => this.props.navigator.push(Router.getRoute('styledTextInput'))} />
         </ScrollView>
       </View>
     )

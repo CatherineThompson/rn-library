@@ -23,11 +23,11 @@ export default class CheckboxAndRadioButtonScreen extends Component {
         <StyledText style={styles.infoText}>Click on the items to select. The icons used are Platform specific.</StyledText>
         <View>
           <Checkbox
-            title='checkbox title'
+            title='Checkbox title'
             selected={this.state.checkboxSelected}
             onPress={this._handlePressCheckbox} />
           <RadioButton
-            title='radio button title'
+            title='Radio button title'
             selected={this.state.radioButtonSelected}
             onPress={this._handlePressRadioButton} />
         </View>
@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-around',
-    padding: 32
+    paddingHorizontal: 32,
+    paddingVertical: 64,
+    alignItems: 'center'
   },
   infoText: {
     fontSize: 16

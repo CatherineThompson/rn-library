@@ -5,7 +5,7 @@ import {
 } from 'react-native'
 import PeakingDrawer from '../libraryComponents/PeakingDrawer'
 
-export default class Home extends Component {
+export default class PeakingDrawerScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
